@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SYSDASH - Monitoring Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">SYSDASH</div>
+        <nav>
+            <a class="active">Overview</a>
+            <a>History</a>
+            <a>Resources</a>
+            <a>Alerts</a>
+            <a>Logs</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <div class="header">
+            <h1>System Monitoring Dashboard</h1>
+            <span class="status-badge">HEALTHY</span>
+        </div>
+
+        <!-- KPI CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>CPU</h3>
+                <div class="value cpu-value">--%</div>
+                <div class="progress-bar">
+                    <div class="progress cpu-progress"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Memory</h3>
+                <div class="value memory-value">--%</div>
+                <div class="progress-bar">
+                    <div class="progress memory-progress"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Disk</h3>
+                <div class="value disk-value">--%</div>
+                <div class="progress-bar">
+                    <div class="progress disk-progress"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Threads</h3>
+                <div class="value threads-value">--</div>
+            </div>
+        </div>
+
+        <!-- PERFORMANCE -->
+        <div class="chart-card">
+            <h2>Performance History</h2>
+            <canvas id="performanceChart"></canvas>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="/js/app.js"></script>
+
+</body>
+</html>
